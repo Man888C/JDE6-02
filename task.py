@@ -1,59 +1,62 @@
-import random
+#Task 2
 
-text = './news.txt'
-f = open(text, "r")
-print(f.readlines())
+text= '/content/news.txt'
+f = open(text, 'r')
+final = f.read()
+
+x = [i for i in final]
+x.reverse()
+x
+"".join(x)
+
+#Task 2
+
+text= '/content/news.txt'
+f = open(text, 'r')
+final = f.read()
+
+def rev_all(x):
+  return x[::-1]
+
+if __name__ == '__main__':
+  print(rev_all(final))
 
 
-def hammer_pickOneMemeber():
-    '''example function'''
+#Task 3
 
-    teamJDE = ['hammer', 'billy', 'chistina']
-    result = random.sample(teamJDE, 1)
-    return result
+text= '/content/news.txt'
+f = open(text, 'r')
+final = f.read()
+final[::-1]
 
 
-if __name__ == "__main__":
-    print(hammer_pickOneMemeber())
-    # print(taskOne())
-    # print(taskTwo())
-    # print(taskThree())
-    # print(taskFour())
+#TASK 3
 
-    # Task-1 - count the total number of words in the prargraph that contains vowel characters(a, e, i, o u)
-           
-        def taskOne(text):
-        
-        detectList = ['a', 'e', 'i', 'o' 'u']
-        counter = 0
-        for char in text:
-            if char in detectList:
-                counter += 1
-        return counter
-    
-    if __name__ == "__main__":
+text= '/content/news.txt'
+f = open(text, 'r')
+final = f.read()
+dev = final.split('(.)')
+dev
 
-        with open(text, 'r') as ff:
-            content = ff.read()
-            print (content)
+def rev(x):
+  print(dev[x][::-1])
 
-            print(taskOne(content))
-            
-    # Task-2 - encode the paragraph by shifting the position of each character by a variable value e.g. I am a boy (1) -> J bn b cpz
+for index, c in enumerate(dev):
+  if index <= len(dev):
+    print(rev(index))
 
-    # Task-3 - Reverse the entire paragraph line by line e.g. I am a boy -> yob a ma I
-    
-    if __name__ == "__main__":
 
-        with open(text, 'r') as ff:
-            content = ff.read()
-            print(content)
+#Task 4
 
-            print(taskOne(content))
-            def my_function(text):
-              return text[::-1]
+text= '/content/news.txt'
+f = open(text, 'r')
+final = f.read()
+dev = final.split(' ')
+dev
 
-            mytxt = my_function(content)
-            print(mytxt)
+def rev(x):
+  print(dev[x][::-1])
 
-    # Task-4 - Reverse the order of character of each word e.g. I am a boy -> I ma a yob
+newrev= [rev(index) for index in dev]
+for index, c in enumerate(dev):
+      str(rev(index))
