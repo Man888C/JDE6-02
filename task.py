@@ -43,12 +43,17 @@ if __name__ == "__main__":
 
     # Task-3 - Reverse the entire paragraph line by line e.g. I am a boy -> yob a ma I
     
-    def reverse_slicing(s):
-        return s[::-1]
-
-    input_str = 'I am a boy'
-
     if __name__ == "__main__":
-        print('Reverse String using slicing =', reverse_slicing(input_str))
+
+        with open(text, 'r') as ff:
+            content = ff.read()
+            print(content)
+
+            print(taskOne(content))
+            def my_function(text):
+              return text[::-1]
+
+            mytxt = my_function(content)
+            print(mytxt)
 
     # Task-4 - Reverse the order of character of each word e.g. I am a boy -> I ma a yob
